@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function () 
     document.querySelector('.navbar-brand img').onmouseover = navBrandMouseHover;
     console.log(document.querySelector('.navbar-brand img'));
     document.querySelector('h2').onmouseover = abrahamLincolnPara;
@@ -24,6 +24,16 @@ window.onload = function () {
     document.querySelector('#home-nav').onmouseover = home_OnMouseHover;
     document.querySelector('#sources-nav').onmouseover = sources_OnMouseHover;
     document.querySelector('#off-web-nav').onmouseover = offweb_OnMouseHover;
+    var i = 0;
+    var x = 0;
+    for(var i of document.querySelectorAll('h2')){
+        i.mouseover = p_MouseHover;
+        i.mouseout = p_MouseOut;
+    }
+    for(var x of document.querySelectorAll('body')){
+        x.mouseover = body_MouseHover;
+        x.mouseout = body_MouseOut;
+    }
 }
 function navBrandMouseHover(){
     this.style.color = "black";
@@ -39,25 +49,13 @@ function abrahamLincolnPara(){
 function abrahamLincolnParaOut(){
     this.style.color = "black";
 }
-function p2_OnMouse(){
+function p_MouseHover(){
     this.style.color = "blue";
 }
-function p3_OnMouse(){
-    this.style.color = "blue";
-}
-function p4_OnMouse(){
-    this.style.color = "blue";
-}
-function p2_OnMouseOut(){
+function p_MouseOut(){
     this.style.color = "black";
 }
-function p3_OnMouseOut(){
-    this.style.color = "black";
-}
-function p4_OnMouseOut(){
-    this.style.color = "black";
-}
-function body1_OnMouseOut(){
+function body_MouseHover(){
     this.style.color = "black";
 }
 function body2_OnMouseOut(){
@@ -98,4 +96,4 @@ function john_OnMouseHover(){
 }
 function bio_OnMouseHover(){
     this.innerHTML = "Biography on Abraham Lincoln";
-}  
+}
